@@ -5,19 +5,19 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "¿Dónde están ubicados?",
-    answer: "Estamos en Villa Adelina. Trabajamos con sistema de recepción de equipos en nuestro taller o podemos coordinar retiro a domicilio en zonas cercanas.",
+    answer: "Estoy en Villa Adelina (Soldado de Malvinas 561). Podés traerme el equipo o coordinamos para que lo pase a buscar si estás cerca.",
   },
   {
     question: "¿Cuánto tardan en arreglar mi PC?",
-    answer: "Para diagnósticos y mantenimientos simples (limpieza, software), demoramos entre 24 y 48 horas. Reparaciones de hardware dependen de la disponibilidad de repuestos.",
+    answer: "Trato de ser lo más rápido posible. Un mantenimiento o limpieza suele estar en 24hs. Si hay que pedir repuestos específicos, puede tardar un poquito más, pero te aviso siempre.",
   },
   {
-    question: "¿El presupuesto tiene costo?",
-    answer: "El presupuesto aproximado por WhatsApp es 100% gratuito. Si necesitamos desarmar el equipo para un diagnóstico profundo en laboratorio, tiene un costo mínimo que se bonifica si aceptás la reparación.",
+    question: "¿Cobrás el presupuesto?",
+    answer: "La consulta por WhatsApp es gratis. Si tengo que desarmar la PC en el taller para encontrar una falla difícil, cobro una revisión mínima que se te descuenta si decidís hacer el arreglo.",
   },
   {
-    question: "¿Dan garantía?",
-    answer: "Sí, todos nuestros trabajos de mano de obra tienen 30 días de garantía. Los repuestos nuevos tienen la garantía oficial del fabricante (generalmente 6 a 12 meses).",
+    question: "¿Tengo garantía?",
+    answer: "¡Sí, claro! Doy 30 días de garantía sobre mi mano de obra para que te quedes tranquilo. Los componentes nuevos tienen su garantía oficial de fábrica.",
   },
 ];
 
@@ -25,7 +25,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-24 px-4 bg-[#050505]">
+    <section id="faq" className="py-24 px-4 bg-[#050505]">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-10 text-center">
           Preguntas Frecuentes

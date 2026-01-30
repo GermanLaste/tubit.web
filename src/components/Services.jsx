@@ -1,35 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Cpu, ShieldCheck, Zap, Monitor, Wrench, ThermometerSun } from "lucide-react";
+import { Monitor, ThermometerSun, Zap, Wrench } from "lucide-react";
 
-// Datos de tus servicios
+// Datos de tus servicios - TEXTOS ACTUALIZADOS
 const services = [
   {
     title: "Armado de PC Gamer",
-    description: "Asesoramiento de componentes, ensamblaje profesional y gestión de cables impecable.",
+    description: "Te ayudo a elegir los componentes y la armo súper prolija. Gestión de cables oculta y lista para jugar.",
     icon: <Monitor className="w-8 h-8 text-blue-400" />,
-    className: "md:col-span-2", // Esta tarjeta ocupa 2 espacios
+    className: "md:col-span-2", 
     gradient: "from-blue-500/20 to-purple-500/20"
   },
   {
-    title: "Mantenimiento Pro",
-    description: "Limpieza profunda, cambio de pasta térmica de alta conductividad.",
+    title: "Mantenimiento Térmico",
+    description: "Limpieza a fondo y cambio de pasta térmica. Bajamos la temperatura y el ruido de tu equipo.",
     icon: <ThermometerSun className="w-8 h-8 text-orange-400" />,
     className: "md:col-span-1",
     gradient: "from-orange-500/20 to-red-500/20"
   },
   {
-    title: "Optimización Software",
-    description: "Windows ligero, drivers actualizados y eliminación de procesos basura.",
+    title: "Windows y Programas",
+    description: "Formateo, instalación de drivers y optimización. Tu PC vuelve a volar como el primer día.",
     icon: <Zap className="w-8 h-8 text-yellow-400" />,
     className: "md:col-span-1",
     gradient: "from-yellow-500/20 to-amber-500/20"
   },
   {
-    title: "Diagnóstico Hardware",
-    description: "¿Pantallazos azules? Detectamos la falla exacta con herramientas de testeo.",
+    title: "Reparación de Hardware",
+    description: "¿No da video? ¿Pantalla azul? Encontramos la falla real y te pasamos un presupuesto honesto.",
     icon: <Wrench className="w-8 h-8 text-green-400" />,
-    className: "md:col-span-2", // Esta tarjeta también es ancha
+    className: "md:col-span-2", 
     gradient: "from-green-500/20 to-emerald-500/20"
   },
 ];
@@ -41,10 +41,10 @@ export default function Services() {
       {/* Título de la sección */}
       <div className="max-w-6xl mx-auto mb-16 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
-          Soluciones de <span className="text-blue-500">Alto Rendimiento</span>
+          ¿En qué te puedo <span className="text-blue-500">ayudar?</span>
         </h2>
-        <p className="text-slate-400 max-w-2xl mx-auto">
-          No solo arreglamos computadoras, optimizamos tu herramienta de trabajo y juego.
+        <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          Soluciones rápidas y prolijas para que no pierdas tiempo renegando con la tecnología.
         </p>
       </div>
 

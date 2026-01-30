@@ -21,18 +21,20 @@ export default function Navbar() {
         {/* MENÚ CENTRAL */}
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-400 items-center">
           
-          {/* EL BOTÓN MÁGICO "SERVICIOS" CON DROPDOWN */}
+          {/* MENÚ DESPLEGABLE */}
           <div 
             className="relative"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <button className="flex items-center gap-1 hover:text-white transition-colors py-4 focus:outline-none">
+            <a 
+              href="/servicios" 
+              className="flex items-center gap-1 hover:text-white transition-colors py-4 focus:outline-none cursor-pointer"
+            >
               Servicios
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isHovered ? "rotate-180" : ""}`} />
-            </button>
+            </a>
 
-            {/* EL DESPLEGABLE (MEGA MENU) */}
             <AnimatePresence>
               {isHovered && (
                 <motion.div
@@ -42,58 +44,57 @@ export default function Navbar() {
                   transition={{ duration: 0.2 }}
                   className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden p-6 grid grid-cols-2 gap-8 z-50"
                 >
-                  {/* COLUMNA 1: HARDWARE (Físico) */}
+                  {/* COLUMNA 1: HARDWARE */}
                   <div>
                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
-                      <Cpu className="w-4 h-4" /> Hardware
+                      <Cpu className="w-4 h-4" /> PC de Escritorio
                     </h4>
                     <ul className="space-y-3">
-                      <DropdownItem title="Limpieza Profunda" desc="Eliminación de polvo y residuos" />
-                      <DropdownItem title="Pasta Térmica" desc="Cambio por Arctic MX-4/6" />
-                      <DropdownItem title="Diagnóstico" desc="Detección de fallas críticas" />
-                      <DropdownItem title="Update Componentes" desc="Mejoras de RAM, SSD, GPU" />
+                      <a href="/servicios#hardware"><DropdownItem title="Limpieza y Mantenimiento" desc="Chau polvo y temperatura" /></a>
+                      <a href="/servicios#hardware"><DropdownItem title="Cambio de Pasta Térmica" desc="Mejor rendimiento" /></a>
+                      <a href="/servicios#hardware"><DropdownItem title="Diagnóstico" desc="¿No prende? Lo reviso" /></a>
+                      <a href="/servicios#hardware"><DropdownItem title="Mejoras (Upgrade)" desc="Más RAM, SSD o Video" /></a>
                     </ul>
                   </div>
 
-                  {/* COLUMNA 2: SOFTWARE (Lógico) */}
+                  {/* COLUMNA 2: SOFTWARE */}
                   <div>
                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
-                      <Zap className="w-4 h-4" /> Software & BIOS
+                      <Zap className="w-4 h-4" /> Sistema y Programas
                     </h4>
                     <ul className="space-y-3">
-                      <DropdownItem title="Optimización & Drivers" desc="Windows más rápido y estable" />
-                      <DropdownItem title="Undervolt / Overclock" desc="Mejora de temperatura/rendimiento" />
-                      <DropdownItem title="BIOS Update" desc="Actualización de firmware placa base" />
-                      <DropdownItem title="Programas de Trabajo" desc="Instalación Suite Adobe, Office, etc." />
+                      <a href="/servicios#software"><DropdownItem title="Optimización Windows" desc="Que ande rápido" /></a>
+                      <a href="/servicios#software"><DropdownItem title="Drivers al día" desc="Para jugar sin errores" /></a>
+                      <a href="/servicios#software"><DropdownItem title="Actualización BIOS" desc="Soporte nuevos micros" /></a>
+                      <a href="/servicios#software"><DropdownItem title="Instalación Programas" desc="Office, Adobe, etc." /></a>
                     </ul>
                   </div>
 
-                  {/* COLUMNA 3: PROYECTOS (Web & Asesoría) - ESTILO DESTACADO */}
+                  {/* COLUMNA 3: WEB */}
                   <div className="col-span-2 mt-2 pt-4 border-t border-white/5">
                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
-                      <Globe className="w-4 h-4" /> Soluciones Digitales
+                      <Globe className="w-4 h-4" /> Proyectos Web
                     </h4>
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="group flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
+                        <a href="https://wa.link/ic1rvt" target="_blank" className="group flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
                             <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400 group-hover:text-blue-300">
                                 <MonitorUp className="w-5 h-5" />
                             </div>
                             <div>
-                                <h5 className="text-white font-medium text-sm">Asesoramiento PC</h5>
-                                <p className="text-slate-500 text-xs mt-1">Te ayudamos a elegir qué comprar.</p>
+                                <h5 className="text-white font-medium text-sm">Asesoramiento</h5>
+                                <p className="text-slate-500 text-xs mt-1">Te ayudo a elegir qué comprar.</p>
                             </div>
-                        </div>
+                        </a>
 
-                        {/* TU NUEVO SERVICIO WEB */}
-                        <div className="group flex items-start gap-3 p-3 rounded-xl bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-white/5 hover:border-white/10 transition-colors cursor-pointer">
+                        <a href="/servicios#web" className="group flex items-start gap-3 p-3 rounded-xl bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-white/5 hover:border-white/10 transition-colors cursor-pointer">
                             <div className="p-2 bg-purple-500/20 rounded-lg text-purple-300">
                                 <FileCode2 className="w-5 h-5" />
                             </div>
                             <div>
-                                <h5 className="text-white font-bold text-sm">Creación de Páginas Web</h5>
-                                <p className="text-slate-400 text-xs mt-1">Portafolios y Landing Pages como esta.</p>
+                                <h5 className="text-white font-bold text-sm">Tu Página Web</h5>
+                                <p className="text-slate-400 text-xs mt-1">Ideal para tu emprendimiento.</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                   </div>
 
@@ -102,8 +103,8 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <a href="#proceso" className="hover:text-white transition-colors">Cómo funciona</a>
-          <a href="#precios" className="hover:text-white transition-colors">Precios</a>
+          <a href="/#proceso" className="hover:text-white transition-colors">Cómo trabajo</a>
+          <a href="/servicios" className="hover:text-white transition-colors">Precios</a>
         </div>
 
         {/* BOTÓN DERECHA */}
@@ -112,23 +113,22 @@ export default function Navbar() {
             target="_blank"
             className="text-xs font-semibold bg-white text-black px-5 py-2 rounded-full hover:bg-slate-200 transition-transform hover:scale-105"
         >
-          Consultar
+          Escribime
         </a>
       </div>
     </nav>
   );
 }
 
-// Componente pequeño para los items de la lista (para no repetir código)
 function DropdownItem({ title, desc }) {
   return (
-    <li className="group cursor-pointer">
+    <div className="group cursor-pointer">
       <h5 className="text-slate-200 text-sm font-medium group-hover:text-blue-400 transition-colors flex items-center gap-2">
         {title}
       </h5>
       <p className="text-slate-500 text-xs group-hover:text-slate-400 transition-colors">
         {desc}
       </p>
-    </li>
+    </div>
   );
 }
