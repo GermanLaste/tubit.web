@@ -1,24 +1,46 @@
-# build output
+# --- Dependencias (Lo más pesado, NUNCA subir) ---
+node_modules/
+.pnp
+.pnp.js
+
+# --- Builds de Producción (Lo que genera npm run build) ---
 dist/
-# generated types
+build/
+
+# --- Cache de Astro (Archivos temporales) ---
 .astro/
 
-# dependencies
-node_modules/
+# --- Variables de Entorno (Secretos/Claves API) ---
+.env
+.env.production
+.env.development
+.env.local
+.env.*
+!.env.example
 
-# logs
+# --- Logs de errores ---
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
+# --- Sistema Operativo (Basura de Windows/Mac) ---
 .DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# jetbrains setting folder
+# --- Editores de Código (Configuraciones locales) ---
+.vscode/
 .idea/
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+# --- Testing ---
+coverage/
+
+# --- TypeScript ---
+*.tsbuildinfo

@@ -4,14 +4,13 @@
 > Una landing page moderna, performante y diseñada para **Tubit.PC**, un servicio técnico de hardware y software en Villa Adelina. Desarrollada con arquitectura de Islas para máxima velocidad.
 
 ## 🚀 Demo
-[Ver Demo en Vivo](https://tu-url-de-vercel.app)
+[Ver Demo en Vivo](https://tubit-web.vercel.app/)
 
 ## ✨ Características Principales
 
 Esta no es una web estática común. Está construida pensando en la experiencia de usuario (UX) y el SEO local.
 
 * **⚡ Astro + React:** Lo mejor de los dos mundos. HTML estático para velocidad (Astro) y componentes interactivos para la UI (React).
-* **🎨 Diseño "Zeabur" aesthetic:** Modo oscuro profundo (`#050505`), gradientes sutiles y efectos de vidrio (glassmorphism).
 * **🌊 Animaciones Fluidas:** Integración de **Framer Motion** para entradas suaves, hover effects y transiciones de estado.
 * **🍱 Bento Grid UI:** Sección de servicios organizada en grillas asimétricas modernas.
 * **📱 100% Responsive:** Se ve perfecto en celulares, tablets y monitores ultrawide.
