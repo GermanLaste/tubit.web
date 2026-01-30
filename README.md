@@ -1,6 +1,6 @@
 # 🔧 Tubit.PC - Landing Page de Servicios IT
 
-![Project Banner](public/banner-placeholder.png)
+![Project Banner](../tubit-pc/public/Banner.png)
 > Una landing page moderna, performante y diseñada para **Tubit.PC**, un servicio técnico de hardware y software en Villa Adelina. Desarrollada con arquitectura de Islas para máxima velocidad.
 
 ## 🚀 Demo
