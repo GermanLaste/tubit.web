@@ -1,43 +1,84 @@
-# Astro Starter Kit: Minimal
+# 🔧 Tubit.PC - Landing Page de Servicios IT
 
-```sh
-npm create astro@latest -- --template minimal
-```
+![Project Banner](public/banner-placeholder.png)
+> Una landing page moderna, performante y diseñada para **Tubit.PC**, un servicio técnico de hardware y software en Villa Adelina. Desarrollada con arquitectura de Islas para máxima velocidad.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Demo
+[Ver Demo en Vivo](https://tu-url-de-vercel.app)
 
-## 🚀 Project Structure
+## ✨ Características Principales
 
-Inside of your Astro project, you'll see the following folders and files:
+Esta no es una web estática común. Está construida pensando en la experiencia de usuario (UX) y el SEO local.
 
-```text
+* **⚡ Astro + React:** Lo mejor de los dos mundos. HTML estático para velocidad (Astro) y componentes interactivos para la UI (React).
+* **🎨 Diseño "Zeabur" aesthetic:** Modo oscuro profundo (`#050505`), gradientes sutiles y efectos de vidrio (glassmorphism).
+* **🌊 Animaciones Fluidas:** Integración de **Framer Motion** para entradas suaves, hover effects y transiciones de estado.
+* **🍱 Bento Grid UI:** Sección de servicios organizada en grillas asimétricas modernas.
+* **📱 100% Responsive:** Se ve perfecto en celulares, tablets y monitores ultrawide.
+* **🔍 SEO Local Optimizado:** Microdatos `JSON-LD` integrados para que Google entienda el negocio (Ubicación, horarios, servicios).
+* **🗺️ Mapa Interactivo:** Footer con integración de Google Maps en escala de grises interactiva.
+
+## 🛠️ Tecnologías Usadas
+
+Este proyecto utiliza un stack moderno para asegurar rendimiento y escalabilidad:
+
+| Tecnología | Propósito |
+|------------|-----------|
+| **[Astro](https://astro.build/)** | Framework principal (MPA) para velocidad de carga zero-js por defecto. |
+| **[React](https://react.dev/)** | Librería de UI para los componentes interactivos (Navbar, Tabs, FAQ). |
+| **[Tailwind CSS](https://tailwindcss.com/)** | Framework de estilos utilitarios para un diseño rápido y consistente. |
+| **[Framer Motion](https://www.framer.com/motion/)** | Librería de animaciones de producción para React. |
+| **[Lucide React](https://lucide.dev/)** | Íconos SVG ligeros y modernos. |
+
+## 📂 Estructura del Proyecto
+
+```bash
 /
-├── public/
+├── public/          # Assets estáticos (imágenes, favicon)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/  # Componentes reutilizables (.jsx y .astro)
+│   │   ├── Hero.jsx       # Portada animada
+│   │   ├── Navbar.jsx     # Menú flotante con dropdown
+│   │   ├── Services.jsx   # Grilla Bento
+│   │   ├── Process.jsx    # Línea de tiempo
+│   │   ├── FAQ.jsx        # Acordeón de preguntas
+│   │   └── Footer.astro   # Pie de página estático
+│   ├── layouts/     # Plantilla base (HTML, Head, SEO)
+│   └── pages/       # Rutas del sitio
+│       ├── index.astro    # Página de inicio
+│       └── servicios.astro # Catálogo detallado
+└── astro.config.mjs # Configuración del framework
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🏁 Instalación y Uso Local
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Instrucciones para correr el proyecto en entorno local:
 
-Any static assets, like images, can be placed in the `public/` directory.
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/GermanLaste/tubit-pc.git](https://github.com/GermanLaste/tubit-pc.git)
+    cd tubit-pc
+    ```
 
-## 🧞 Commands
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
 
-All commands are run from the root of the project, from a terminal:
+3.  **Correr el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🤝 Autor
 
-## 👀 Want to learn more?
+Desarrollado con ❤️ y mucho café por **German Laste**.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+* **GitHub:** [@GermanLaste](https://github.com/GermanLaste/)
+* **LinkedIn:** [German Laste](https://www.linkedin.com/in/german-laste/)
+* **Web:** [tubit.pc](https://tubit-web.vercel.app/)
+
+## 📄 Licencia
+
+**Copyright © 2026 German Laste.**
+Este proyecto no es Open Source. Todos los derechos están reservados. Se permite su visualización con fines educativos o de evaluación, pero se prohíbe estrictamente su copia, modificación o uso comercial sin permiso del autor.
