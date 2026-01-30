@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.jsx'; // <--- Importamos el nuevo componente
+import { Wrench } from 'lucide-react';
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Servicio técnico de PC y Diseño Web en Villa Adelina" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	
+	<body class="bg-[#050505] text-white min-h-screen flex flex-col font-sans selection:bg-purple-500/30">
+		
+		<Navbar client:load />
+
+		<main class="flex-grow pt-16">
+			<slot />
+		</main>
+
+        </body>
+</html>
