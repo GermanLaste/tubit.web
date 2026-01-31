@@ -43,8 +43,7 @@ export default function Hero() {
 
         <motion.h1 
           variants={fadeInUp}
-          className="text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-[1.1]"
-        >
+className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight mb-6 leading-[1.1]"        >
           <span className="block text-white drop-shadow-xl">Tu computadora,</span>
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-violet-400 to-blue-400 animate-gradient-x bg-[length:200%_auto]">
             como nueva.

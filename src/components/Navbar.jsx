@@ -42,8 +42,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 5, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden p-6 grid grid-cols-2 gap-8 z-50"
-                >
+className="absolute top-full left-1/2 -translate-x-1/2 w-[95vw] md:w-[600px] max-w-[600px] ..."                >
                   {/* COLUMNA 1: HARDWARE */}
                   <div>
                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
