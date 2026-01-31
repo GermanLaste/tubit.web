@@ -27,3 +27,18 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #3b82f6; 
 }
+@layer base {
+  body {
+    /* Esto asegura que el fondo base sea negro pero permita ver el grid */
+    background-color: #050505;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+}

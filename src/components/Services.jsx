@@ -52,12 +52,13 @@ const Card = ({ item, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
       viewport={{ once: true }}
-      className={`
-        ${item.className} 
-        group relative overflow-hidden rounded-3xl p-8 
-        bg-[#0a0a0a] border border-white/10
-        hover:border-white/20 transition-colors duration-500
-      `}
+      // Reemplaza las líneas de clases actuales por estas:
+className={`
+  ${item.className} 
+  group relative overflow-hidden rounded-3xl p-8 
+  bg-white/[0.03] backdrop-blur-sm border border-white/10
+  hover:border-blue-500/30 transition-all duration-500
+`}
     >
       {/* EL SPOTLIGHT (Luz que sigue al mouse) */}
       <div 
@@ -88,9 +89,10 @@ const Card = ({ item, index }) => {
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-24 px-4 bg-[#050505] relative overflow-hidden">
+<section id="servicios" className="py-24 px-4 bg-transparent relative overflow-hidden">      
+      <div className="absolute top-0 -left-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 -right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
       
-      {/* Título de la sección */}
       <div className="max-w-6xl mx-auto mb-16 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
           ¿En qué te puedo <span className="text-blue-500">ayudar?</span>

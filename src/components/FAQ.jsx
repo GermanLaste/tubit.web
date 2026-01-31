@@ -25,8 +25,8 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section id="faq" className="py-24 px-4 bg-[#050505]">
-      <div className="max-w-3xl mx-auto">
+
+<section id="faq" className="py-24 px-4 bg-transparent relative">      <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-10 text-center">
           Preguntas Frecuentes
         </h2>

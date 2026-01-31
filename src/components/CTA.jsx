@@ -4,8 +4,8 @@ import { MessageCircle, ArrowRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
-      
+
+<section className="py-20 px-4 bg-transparent relative">      
       {/* Fondo con degradado "Nuclear" */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#050505] to-blue-900/10"></div>
       
