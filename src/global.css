@@ -1,20 +1,29 @@
 @import "tailwindcss";
 
+@theme {
+  /* Registramos la fuente y la animación para usarla en Tailwind */
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --animate-shimmer: shimmer 2.5s infinite linear;
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: #050505; 
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #334155; /* Slate-700 */
+  background: #334155; 
   border-radius: 5px;
-  border: 2px solid #050505; /* Crea un margen visual */
+  border: 2px solid #050505; 
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6; /* Blue-500 al pasar el mouse */
+  background: #3b82f6; 
 }

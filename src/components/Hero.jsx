@@ -33,9 +33,9 @@ export default function Hero() {
         className="relative z-10 max-w-5xl mx-auto"
       >
         
-        {/* Badge */}
+        {/* Badge - AHORA CON FUENTE MONOESPACIADA */}
         <motion.div variants={fadeInUp} className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-xs font-medium text-blue-300 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-xs font-mono font-medium text-blue-300 backdrop-blur-md">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
@@ -44,7 +44,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Título Principal - TEXTO NUEVO */}
         <motion.h1 
           variants={fadeInUp}
           className="text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-[1.1]"
@@ -55,7 +54,6 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        {/* Subtítulo - TEXTO NUEVO */}
         <motion.p variants={fadeInUp} className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium drop-shadow-md leading-relaxed">
           Diagnóstico honesto, armado de PC Gamer y mantenimiento. 
           Traé tu equipo y dejalo funcionando como nuevo, sin vueltas.
@@ -64,10 +62,14 @@ export default function Hero() {
         {/* Botones */}
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           
-          {/* Botón 1: Servicios */}
+          {/* Botón 1: Servicios - CON EFECTO SHIMMER (BRILLO) */}
           <a href="/servicios" className="group relative px-8 py-4 bg-white text-black font-bold rounded-xl overflow-hidden transition-transform active:scale-95 hover:scale-105 inline-flex items-center justify-center">
+            
+            {/* El efecto Shimmer */}
+            <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent z-20"></div>
+
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-            <span className="relative flex items-center gap-2">
+            <span className="relative flex items-center gap-2 z-10">
               <Wrench className="w-5 h-5" />
               Ver Servicios
             </span>
@@ -78,7 +80,7 @@ export default function Hero() {
             href="https://wa.link/ic1rvt" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 hover:scale-105 transition-transform duration-300"
+            className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none hover:scale-105 transition-transform duration-300"
           >
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#312e81_50%,#E2E8F0_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-[#0a0a0a] px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">
