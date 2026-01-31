@@ -38,11 +38,12 @@ export default function Navbar() {
             <AnimatePresence>
               {isHovered && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 5, scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-className="absolute top-full left-1/2 -translate-x-1/2 w-[95vw] md:w-[600px] max-w-[600px] ..."                >
+  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+  animate={{ opacity: 1, y: 0, scale: 1 }}
+  exit={{ opacity: 0, y: 5, scale: 0.95 }}
+  transition={{ duration: 0.2 }}
+  className="absolute top-full left-1/2 -translate-x-1/2 w-[95vw] md:w-[600px] max-w-[600px] bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 p-6 rounded-2xl shadow-2xl grid grid-cols-2 gap-8 mt-2"
+       >
                   {/* COLUMNA 1: HARDWARE */}
                   <div>
                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
