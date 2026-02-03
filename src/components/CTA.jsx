@@ -5,13 +5,12 @@ import { MessageCircle, ArrowRight } from "lucide-react";
 export default function CTA() {
   return (
 
-<section className="py-20 px-4 bg-transparent relative">      
+<section className="py-20 px-4 bg-transparent relative overflow-hidden">      
       {/* Fondo con degradado "Nuclear" */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#050505] to-blue-900/10"></div>
       
-      {/* Círculo de luz de fondo */}
+      {/* Círculo de luz de fondo - ESTE ES EL ELEMENTO QUE CAUSABA EL ERROR */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none"></div>
-
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         
         <motion.h2 
